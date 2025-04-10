@@ -23,4 +23,10 @@ bot = lucyph()
 async def hello(interaction:discord.Interaction):
     await interaction.response.send_message(f"Hi {interaction.user.mention}!")
 
+
+bot.tree.command(name="soma", description="Uma soma que o bot ira resolver")
+async def sooma(interaction:discord.Interaction,numero1:int,numero2:int):
+    numero_somado = numero1 + numero2
+    await interaction.response.send_message(f"O numero somado é {numero_somado}.)
+
 bot.run(You Token)
