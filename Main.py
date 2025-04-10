@@ -25,6 +25,10 @@ async def hello(interaction:discord.Interaction):
 
 
 bot.tree.command(name="soma", description="Uma soma que o bot ira resolver")
+app_commads:description{
+    numero1 = "primeiro numero a somar",
+    numero2 = "segundo numero a somar"
+}
 async def sooma(interaction:discord.Interaction,numero1:int,numero2:int):
     numero_somado = numero1 + numero2
     await interaction.response.send_message(f"O numero somado é {numero_somado}.)
